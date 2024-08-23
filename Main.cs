@@ -30,7 +30,6 @@ class Program{
                 string produto = Convert.ToString(Console.ReadLine());
                 Console.WriteLine("Seu produto se chama: " + produto);
                 break;
-            
             case 2:
                 Console.WriteLine("Lista de produtos");
                 Console.WriteLine(produto);
