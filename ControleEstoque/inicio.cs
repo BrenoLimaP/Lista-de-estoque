@@ -1,5 +1,5 @@
-namespace Main;
-public class inicio{
+namespace Controle{
+    public class inicio{
     static void info (string[] args){
         int[] numeros = new int[01]; // vetor sobre a quatidade de jogos na lista *** ver sobre esse problema de não chamar a variavel numeros***
         Jogo[] jogos = new jogo[2]; // tem dois jogos listados dentro dessa lista
@@ -16,4 +16,5 @@ public class inicio{
         jogo2.plataforma2 = "Playstation / Xbox / PC";
         jogo2.Estoque2 = 5;
     }
+}
 }

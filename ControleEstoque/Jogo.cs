@@ -1,4 +1,3 @@
-namespace Main;
 
 public Class Jogo { // Pedido: Será o responsavel pelas perguntas sobre os pedidos no geral.
     public string Nome { get; set; } // irá pedir o nome do jogo
