@@ -1,4 +1,5 @@
 using System;
+using Controle;
 // Trabalho da faculdade - PTI
 // Fazer o estoque de uma empresa com produtos de minhas escolha
 // Declarar mais de 3 topicos para cada item, por ex: Livro= Autor, cor, e tema;
@@ -6,10 +7,14 @@ using System;
 // 1-Novo / 2-Listar Produtos / 3-Remover Produtos / 4-Entrada Estoque / 5-Saida Estoque / 0-Sair
 // O menu precisa ser recursivo, ou seja, precisa aparecer até que seja teclado 0 ou sair
 // Menu
-public class Program{ 
+public class Program
+{ 
     // Coleta de dados
     // Processamento de Dados
-    // Saida de dados
+    // Saida de dados,
+    Jogo[] jogos = new Jogo[0];
+    Gerenciador gerenciador = new Gerenciador();
+    int contador = 0;
     public static void Main(){
         while(true){
             int opcao = Menuescolhas();
@@ -40,7 +45,7 @@ public class Program{
         {
             //opções do menu
             case 1: // para poder adicionar um novo jogo
-                string jogo = Joguinho();
+                gerenciador.Adicionar();
                 break;
             case 2: // Listar jogos
                 //if (!string.IsNullOrEmpty(game))
@@ -76,13 +81,11 @@ public class Program{
         }
         
     }
-    public static string Joguinho (){
-        Console.WriteLine("descreva o nome do jogo:");
-        string game = Convert.ToString(Console.ReadLine());
-        Console.WriteLine("Seu jogo se chama: " + game);
-        return game;
-        //public string Nome { get; set; } // irá pedir o nome do jogo
-        //public double Preco { get; set;} // irá pedir o preço do jogo
-        //public int estoque { get; set;} //  irá pedir o numero em estoque do jogo
+
+    public class Jogo (){
+        public string Nome { get; set; } // irá pedir o nome do jogo
+        public double Preco { get; set;} // irá pedir o preço do jogo
+        public int Estoque { get; set;}
     }
+    
 }
