@@ -1,15 +1,15 @@
-using Controle.ControleEstoque;
+using System;
 
-namespace Controle
+namespace ControleEstoque
 {
     public class Gerenciador
     {
         // Coleta de dados
         // Processamento de Dados
         // Saida de dados,
-        static Jogo[] jogos = new Jogo[10];
-        static int contador = 0;
-        public static void Escolher(int escolha){
+        Jogo[] jogos = new Jogo[10];
+        int contador = 0;
+        public static Escolher(int escolha){
             switch (escolha)
             {
                 //opções do menu
@@ -126,7 +126,7 @@ namespace Controle
             Jogo jogo = null;
             for (int i = 0; i < contador; i++)
             {
-            i   f (jogos[i].Nome.Equals(nome, StringComparison.OrdinalIgnoreCase))
+                if (jogos[i].Nome.Equals(nome, StringComparison.OrdinalIgnoreCase))
                 {
                     jogo = jogos[i];
                     break;

@@ -1,5 +1,5 @@
 using System;
-using ControleEstoque;
+using ControleEstoque.csproj;
 // Trabalho da faculdade - PTI
 // Fazer o estoque de uma empresa com produtos de minhas escolha
 // Declarar mais de 3 topicos para cada item, por ex: Livro= Autor, cor, e tema;
@@ -9,13 +9,12 @@ using ControleEstoque;
 // Menu
 public class Program
 {   
-    Gerenciador gerenciador = new Gerenciador();
-
     public static void Main(){
+        Gerenciador gerenciador = new Gerenciador();    
         while(true){
             int opcao = Menuescolhas();
             if(opcao == 0) break;
-            gerenciador.Escolher(opcao); // Passa a escolha para o método Escolher
+            Gerenciador.Escolher(opcao); // Passa a escolha para o método Escolher
         }
     }
     public static int Menuescolhas(){
