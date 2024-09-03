@@ -76,6 +76,10 @@ public class Program
             novoJogo.Preco = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Digite a quantidade em estoque:");
             novoJogo.Estoque = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Qual a plataforma:");
+            novoJogo.Plataforma = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Qual o genero do jogo:");
+            novoJogo.Genero = Convert.ToString(Console.ReadLine());
             jogos[contador] = novoJogo;
             contador++;
             Console.WriteLine("Jogo adicionado com sucesso!");
@@ -88,7 +92,7 @@ public class Program
             Console.WriteLine("Jogos cadastrados:");
             for (int i = 0; i < contador; i++)
             {
-                Console.WriteLine("Nome: " + jogos[i].Nome + " Preço: " + jogos[i].Preco + " Estoque: " + jogos[i].Estoque);
+                Console.WriteLine(@"Nome: " + jogos[i].Nome + " Preço: " + jogos[i].Preco + " Estoque: " + jogos[i].Estoque + " Plataforma: " + jogos[i].Plataforma + " Genero: " + jogos[i].Genero);
             }
         }
         else
@@ -139,14 +143,14 @@ public class Program
         }
         if (jogo != null)
         {
-         Console.WriteLine("Digite a quantidade para adicionar ao estoque:");
+         Console.WriteLine("Quanto quer adicionar em estoque? ");
             int quantidade = Convert.ToInt32(Console.ReadLine());
             jogo.Estoque += quantidade;
             Console.WriteLine("Estoque atualizado com sucesso!");
         }
         else
         {
-            Console.WriteLine("Jogo não encontrado.");
+            Console.WriteLine("Não encontrado.");
         }   
     }
     public static void SaidaEstoque()
@@ -164,7 +168,7 @@ public class Program
         }
         if (jogo != null)
         {
-            Console.WriteLine("Digite a quantidade para retirar do estoque:");
+            Console.WriteLine("Quantidade para retirar do estoque:");
             int quantidade = Convert.ToInt32(Console.ReadLine());
             if (quantidade <= jogo.Estoque)
             {
@@ -178,7 +182,7 @@ public class Program
         }
         else
         {
-           Console.WriteLine("Jogo não encontrado.");
+           Console.WriteLine("Não encontrado.");
         }
     }
     public static void ExpandirVetor()
@@ -197,6 +201,8 @@ public class Program
         public string Nome { get; set; } // irá pedir o nome do jogo
         public double Preco { get; set;} // irá pedir o preço do jogo
         public int Estoque { get; set;}
+        public string Plataforma { get; set; }
+        public string Genero { get; set; }
     }
 
 }
